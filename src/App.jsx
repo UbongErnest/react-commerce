@@ -10,7 +10,9 @@ import Trackings from './pages/Trackings'
 function App() {
   return (
     <>
+    {/* <Headers/> */}
     <Routes>
+      
       <Route path="/" element={<HomePage/>}/>
       <Route path="checkout" element={<CheckoutPage/>}/>
       <Route path="orders" element = {<Orders/>}/>
