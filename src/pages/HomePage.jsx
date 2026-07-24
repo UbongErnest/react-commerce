@@ -3,21 +3,22 @@ import './header.css'
 import './HomePage.css'
 
 import axios from "axios"
-import { useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 
-function HomePage() {
+function HomePage({cart}) {
     const [products, setProducts] = useState([])
+   
     useEffect(() => {
-        axios.get('http://localhost:3000/api/products').then((response) => {
+        axios.get('/api/products').then((response) => {
             setProducts(response.data)
         })
-    },[])
+    }, [])
 
 
     return (
         <>
             <title>Ecommerce Project</title>
-            <Header />
+            <Header cart={cart} />
             <div className="home-page">
                 <div className="products-grid">
                     {products.map((product) => {

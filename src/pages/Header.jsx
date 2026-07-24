@@ -1,37 +1,42 @@
+
 import './header.css'
+import { Link } from 'react-router'
 
 function Header() {
+
+
+
     return (
         <>
-            <div class="header">
-                <div class="left-section">
-                    <a href="/" class="header-link">
-                        <img class="logo"
+            <div className="header">
+                <div className="left-section">
+                    <Link to="/" className="header-link">
+                        <img className="logo"
                             src="images/logo-white.png" />
-                        <img class="mobile-logo"
+                        <img className="mobile-logo"
                             src="images/mobile-logo-white.png" />
-                    </a>
+                    </Link>
                 </div>
 
-                <div class="middle-section">
-                    <input class="search-bar" type="text" placeholder="Search" />
+                <div className="middle-section">
+                    <input className="search-bar" type="text" placeholder="Search" />
 
-                    <button class="search-button">
-                        <img class="search-icon" src="images/icons/search-icon.png" />
+                    <button className="search-button">
+                        <img className="search-icon" src="images/icons/search-icon.png" />
                     </button>
                 </div>
 
-                <div class="right-section">
-                    <a class="orders-link header-link" href="/orders">
+                <div className="right-section">
+                    <Link className="orders-link header-link" to="/orders">
 
-                        <span class="orders-text">Orders</span>
-                    </a>
-
-                    <a class="cart-link header-link" href="/checkout">
-                        <img class="cart-icon" src="images/icons/cart-icon.png" />
-                        <div class="cart-quantity">3</div>
-                        <div class="cart-text">Cart</div>
-                    </a>
+                        <span className="orders-text">Orders</span>
+                    </Link>
+                    =
+                    <Link className="cart-link header-link" to="/checkout">
+                        <img className="cart-icon" src="images/icons/cart-icon.png" />
+                        <div className="cart-quantity">3</div>
+                        <div className="cart-text">Cart</div>
+                    </Link>
                 </div>
             </div>
         </>
