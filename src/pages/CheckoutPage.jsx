@@ -1,6 +1,7 @@
 import './checkout.css'
 import './checkout-header.css'
 import Header from "./Header"
+// import { formatMoney } from '../utils/money'
 
 function CheckoutPage() {
     return (
