@@ -2,7 +2,7 @@
 import './header.css'
 import { Link } from 'react-router'
 
-function Header() {
+function Header({cart}) {
 
 
 
@@ -31,10 +31,9 @@ function Header() {
 
                         <span className="orders-text">Orders</span>
                     </Link>
-                    =
                     <Link className="cart-link header-link" to="/checkout">
                         <img className="cart-icon" src="images/icons/cart-icon.png" />
-                        <div className="cart-quantity">3</div>
+                        <div className="cart-quantity">{cart.reduce((sum, item) => sum + item.quantity, 0)}</div>
                         <div className="cart-text">Cart</div>
                     </Link>
                 </div>
