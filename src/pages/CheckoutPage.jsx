@@ -2,8 +2,6 @@ import { formatMoney } from '../utils/money';
 import './checkout.css'
 import './checkout-header.css'
 import Header from "./Header"
-// import {useEffect, useState} from 'react'
-// import axios from 'axios';
 
 function CheckoutPage({ cart }) {
   const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -14,13 +12,6 @@ function CheckoutPage({ cart }) {
   const estimatedTax = Math.round(itemsSubtotal * 0.1);
   const orderTotal = itemsSubtotal + estimatedTax;
 
-  // const [deliveryOptions, setDeliveryOptions ] = useState([])
-  // useEffect(()=>{
-  //     axios.get('/api/delivery-options?expand=estimatedDeliveryTime').then((response)=>{
-  //       setDeliveryOptions(response.data)
-        
-  //     })
-  // },[] )
   return (
     <>
       <title>Checkout</title>
